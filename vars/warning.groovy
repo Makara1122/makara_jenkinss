@@ -1,5 +1,5 @@
-def call(String message) {
+def call(Map config = [:]) {
   hello(name: "Kanha Phol", dayOfWeek:"Monday")
-  warning("King Kong","Holiday")
-  sh " echo Hello ${message}. "
+  loadlinux(name:"hello_world.sh")
+  sh " ./hello_world.sh ${config.name} ${config.dayOfWeek}."
 }
